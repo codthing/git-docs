@@ -21,13 +21,11 @@ $ git config --global user.email "用户邮箱"
 
 ```
 $ mkdir <目录名>
-
 ```
 2.将目录变成可管理的仓库
 
 ```
 $ git init
-
 ```
 ### (四). 把文件添加到版本库
 
@@ -35,13 +33,11 @@ $ git init
 
 ```
 $ git add <文件名>` 或 `$ git add .
-
 ```
 2.`git commit` 把文件一次性提交到仓库
 
 ```
 $ git commit -m "注释说明"
-
 ```
 # 二. 时光穿梭
 
@@ -51,13 +47,11 @@ $ git commit -m "注释说明"
 
 ```
 $ git status
-
 ```
 2.查看修改的内容
 
 ```
 $ git diff <文件名>
-
 ```
 ### (六). 版本回退
 
@@ -65,7 +59,6 @@ $ git diff <文件名>
 
 ```
 $ git log
-
 ```
 *HEAD表示当前版本*
 
@@ -73,19 +66,16 @@ $ git log
 
 ```
 $ git reset --hard <版本ID>
-
 ```
 3.查看内容
 
 ```
 $ cat <文件名>
-
 ```
 4.查看命令历史
 
 ```
 $ git reflog
-
 ```
 
 ### (七). 工作区和暂存区(HEAD是指针)
@@ -139,25 +129,21 @@ $ git reflog
 
 ```
 git remote add origin git@github.com:<用户名>/<版本库名>.git
-
 ```
 3.第一次推送所有内容
 
 ```
 git push -u origin master
-
 ```
 4.之后推送所有的内容可简化为
 
 ```
 git push origin master
-
 ```
 ### (十三).从远程库克隆(相当于建立了链接)
 
 ```
 git clone <远程库地址>
-
 ```
 # 四. 分支管理
 
@@ -167,37 +153,31 @@ git clone <远程库地址>
 
 ```
 git branch
-
 ```
 2.创建分支
 
 ```
 git branch <分支名>
-
 ```
 3.切换分支
 
 ```
 git checkout <分支名>
-
 ```
 4.创建+切换分支
 
 ```
 git checkout -b <某分支名>
-
 ```
 5.合并某分支到当前分支
 
 ```
 git merge <某分支名>
-
 ```
 6.删除分支
 
 ```
 git branch -d <某分支名>
-
 ```
 ### (十五).解决冲突
 
@@ -234,7 +214,6 @@ git branch -d <某分支名>
 
 ```
 $ git merge --no-ff -m "merge with no-ff" dev
-
 ```
 
 >因为本次合并要创建一个新的 commit，所以加上 -m 参数，把 commit 描述写进去。
@@ -248,19 +227,16 @@ $ git merge --no-ff -m "merge with no-ff" dev
 
 ```
 git stash
-
 ```
 2.修复后，再回到工作现场
 
 ```
 git stash pop
-
 ```
 3.查看stash藏储
 
 ```
 git stash list
-
 ```
 ### (十八).Feature分支
 
@@ -270,7 +246,6 @@ git stash list
 
 ```
 git branch -D <分支名>
-
 ```
 ### (十九).多人协作
 
@@ -278,7 +253,6 @@ git branch -D <分支名>
 
 ```
 git remote -v
-
 ```
 2.本地新建的分支如果不推送到远程，对其他人就是不可见的
 
@@ -286,25 +260,21 @@ git remote -v
 
 ```
 git push origin <分支名>
-
 ```
 4.在本地创建和远程分支对应的分支，本地和远程分支的名称最好一致
 
 ```
 git checkout -b <本地分支名> origin/<远程分支名>
-
 ```
 5.建立本地分支和远程分支的关联
 
 ```
 git branch --set-upstream <本地分支名> origin/<远程分支名>
-
 ```
 6.从远程抓取分支，如果有冲突，要先处理冲突
 
 ```
 git pull
-
 ```
 ### (二十).Rebase
 
@@ -312,7 +282,6 @@ git pull
 
 ```
 git rebase
-
 ```
 - `git rebase` 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
@@ -326,25 +295,21 @@ git rebase
 
 ```
 git tag <tagname>
-
 ```
 2.指定标签信息
 
 ```
 git tag -a <tagname> -m "blablabla..."
-
 ```
 3.查看所有标签
 
 ```
 git tag
-
 ```
 4.查看说明文字
 
 ```
 git show <tagname>
-
 ```
 ### (二十二).操作标签
 
@@ -352,25 +317,21 @@ git show <tagname>
 
 ```
 git push origin <tagname>
-
 ```
 2.推送全部未推送过的本地标签
 
 ```
 git push origin --tags
-
 ```
 3.删除一个本地标签
 
 ```
 git tag -d <tagname>
-
 ```
 4.删除一个远程标签
 
 ```
 git push origin :refs/tags/<tagname>
-
 ```
 
 # 六.使用GitHub
@@ -391,37 +352,31 @@ git push origin :refs/tags/<tagname>
 
 ```
 git remote rm origin
-
 ```
 2.然后，先关联 GitHub 的远程库
 
 ```
 git remote add github git@github.com:<用户名>/<版本库名>.git
-
 ```
 3.接着，再关联 码云 的远程库
 
 ```
 git remote add gitee git@gitee.com:<用户名>/<版本库名>.git
-
 ```
 4.查看远程库信息，可以看到两个远程库
 
 ```
 git remote -v
-
 ```
 5.如果要推送到GitHub，使用命令
 
 ```
 git push github master
-
 ```
 6.如果要推送到码云，使用命令
 
 ```
 git push gitee master
-
 ```
 
 - 这样一来，我们的本地库就可以同时与多个远程库互相同步
@@ -448,26 +403,22 @@ $ git add App.class
 The following paths are ignored by one of your .gitignore files:
 App.class
 Use -f if you really want to add them.
-
 ```
 - 如果你确实想添加该文件，可以用 -f 强制添加到 Git
 
 ```
 $ git add -f App.class
-
 ```
 - 或者你发现，可能是 .gitignore 写得有问题，需要找出来到底哪个规则写错了，可以用 git check-ignore 命令检查
 
 ```
 $ git check-ignore -v App.class
 .gitignore:3:*.class    App.class
-
 ```
 ### (二十四).配置别名,例如用 st 替代 status
 
 ```
 $ git config --global alias.st status
-
 ```
 
 ### (二十五).搭建Git服务器
