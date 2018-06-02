@@ -14,7 +14,6 @@ git 的使用文档小总结
 ```
 $ git config --global user.name "用户名"`
 $ git config --global user.email "用户邮箱"
-
 ```
 ### (三). 创建版本库
 
