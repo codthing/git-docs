@@ -216,7 +216,7 @@ git branch -d <某分支名>
 
 1.首先，master 分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
 
-2.那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把 dev 分支合并到 master 上，在 master 分支发布1.0版本；
+2.那在哪干活呢？干活都在 dev 分支上，也就是说，dev分支是不稳定的，到某个时候，比如 1.0 版本发布时，再把 dev 分支合并到 master 上，在 master 分支发布1.0版本；
 
 3.你和你的小伙伴们每个人都在 dev 分支上干活，每个人都有自己的分支，时不时地往 dev 分支上合并就可以了。
 
@@ -224,9 +224,24 @@ git branch -d <某分支名>
 
 <img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0">
 
+
 - Git分支十分强大，在团队开发中应该充分应用。
 
+- 默认 Git 会用 Fast forward 模式，但这种模式下，删除分支后，会丢掉分支信息
+
 - 合并分支时，加上 --no-ff 参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而 fast forward 合并就看不出来曾经做过合并。
+
+- 准备合并 dev 分支，请注意 --no-ff 参数，表示禁用 Fast forward：
+
+```
+$ git merge --no-ff -m "merge with no-ff" dev
+
+```
+
+>因为本次合并要创建一个新的 commit，所以加上 -m 参数，把 commit 描述写进去。
+
+<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384909222841acf964ec9e6a4629a35a7a30588281bb000/0">
+
 
 ### (十七).Bug分支
 
