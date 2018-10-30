@@ -145,6 +145,12 @@ git push origin master
 ```
 git clone <远程库地址>
 ```
+### 从远处仓库全部拉取(代替局部更新)到本地
+
+```
+git pull origin master
+```
+
 # 四. 分支管理
 
 ### (十四).创建与合并分支
