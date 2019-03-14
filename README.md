@@ -3,7 +3,7 @@ git 的使用文档小总结
 
 注释: Unix 的哲学是“没有消息就是好消息”
 
-#新增（2019-3-14）避免每次提交都要输入账号和密码的解决办法：
+# 新增（2019-3-14）避免每次提交都要输入账号和密码的解决办法：
 ```
 $  git config --global user.email "you@example.com"
 $  git config --global user.name "Your Name"
