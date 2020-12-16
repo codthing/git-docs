@@ -3,10 +3,11 @@ git 的使用文档小总结
 
 注释: Unix 的哲学是“没有消息就是好消息”
 
-# 新增（2019-3-14）避免每次提交都要输入账号和密码的解决办法：
+# 新增（2020-12-16）git pull origin main 失败的解决办法：
+`报错 error: Your local changes to the following files would be overwritten by merge:         src/screens/HandBookVideoScreen.tsx Please commit your changes or stash them before you merge.`
 ```
-$  git config --global user.email "you@example.com"
-$  git config --global user.name "Your Name"
+$  git reset --hard
+$  git pull
 ```
 
 # 一. 开始工作
