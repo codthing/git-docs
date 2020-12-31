@@ -89,11 +89,7 @@ $ git reflog
 
 1.`git add .` 或 `git add <文件名>`
 
-<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0" />
-
 2.`git commit -m "注释说明"`
-
-<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0" />
 
 ### (八). 管理修改
 
@@ -212,10 +208,6 @@ git branch -d <某分支名>
 
 3.你和你的小伙伴们每个人都在 dev 分支上干活，每个人都有自己的分支，时不时地往 dev 分支上合并就可以了。
 
-- 所以，团队合作的分支看起来就像这样：
-
-<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0">
-
 
 - Git分支十分强大，在团队开发中应该充分应用。
 
@@ -230,8 +222,6 @@ $ git merge --no-ff -m "merge with no-ff" dev
 ```
 
 >因为本次合并要创建一个新的 commit，所以加上 -m 参数，把 commit 描述写进去。
-
-<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384909222841acf964ec9e6a4629a35a7a30588281bb000/0">
 
 
 ### (十七).Bug分支
@@ -354,8 +344,6 @@ git push origin :refs/tags/<tagname>
 - 自己拥有 Fork 后的仓库的读写权限
 
 - 可以推送 pull request 给官方仓库来贡献代码。
-
-<img src="https://cdn.liaoxuefeng.com/cdn/files/attachments/001384926554932eb5e65df912341c1a48045bc274ba4bf000/0">
 
 # 七.使用码云
 
