@@ -186,7 +186,7 @@ git merge <某分支名>
 6.删除分支
 
 ```
-git branch -d <某分支名>
+git branch -D <某分支名>
 ```
 ### (十五).解决冲突
 
