@@ -186,7 +186,8 @@ git merge <某分支名>
 6.删除分支
 
 ```
-git branch -D <某分支名>
+删除本地分支命令行: git branch -d <某分支名>
+删除远程分支命令行: git push origin --delete <某分支名>
 ```
 ### (十五).解决冲突
 
